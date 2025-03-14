@@ -17,6 +17,7 @@ import { svgSprites } from './gulp/tasks/svg-sprite.js';
 
 import { cacheFiles } from './gulp/tasks/cache-files.js';
 import { rewriteFiles } from './gulp/tasks/rewrite-files.js';
+import { zipFiles } from './gulp/tasks/zip-files.js';
 
 global.app = {
   gulp,
@@ -46,9 +47,11 @@ const watchFiles = () => {
 const dev = gulp.series(clean, htmlFilesInclude, scripts, styles, assets, images, avifImages, webpImages, svgSprites, watchFiles);
 const build = gulp.series(clean, htmlFilesInclude, scripts, styles, assets, images, avifImages, webpImages, svgSprites, htmlMinify);
 const cache = gulp.series(cacheFiles, rewriteFiles);
+const zip = zipFiles;
 
 export { dev }
 export { build }
 export { cache }
+export { zip }
 
 gulp.task('default', dev);
