@@ -1,0 +1,221 @@
+{
+  "svguse": {
+    "scope": "html",
+    "prefix": "g-use",
+    "body": [
+      "<svg class=\"\" aria-hidden=\"true\">",
+      "  <use xlink:href=\"assets/images/sprite.svg#$2\"></use>",
+      "</svg>"
+    ],
+    "description": "Snippet for use svg sprites"
+  },
+  "theme-toggler": {
+    "scope": "html",
+    "prefix": "g-theme-toggle",
+    "body": [
+      "<button id=\"theme-toggle\" class=\"button-reset theme-toggle\" type=\"button\" title=\"Toggles light & dark\" aria-label=\"auto\" aria-live=\"polite\">",
+      "  <svg class=\"theme-toggle__mode\" aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">",
+      "     <mask class=\"theme-toggle__mode-moon\" id=\"moon-mask\">",
+      "       <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\" />",
+      "       <circle cx=\"24\" cy=\"10\" r=\"6\" fill=\"black\" />",
+      "     </mask>",
+      "     <circle class=\"theme-toggle__mode-sun\" cx=\"12\" cy=\"12\" r=\"6\" mask=\"url(#moon-mask)\" fill=\"currentColor\" />",
+      "     <g class=\"theme-toggle__mode-sun-beams\" stroke=\"currentColor\">",
+        "     <line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\" />",
+        "     <line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" />",
+        "     <line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\" />",
+        "     <line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\" />",
+        "     <line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\" />",
+        "     <line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\" />",
+        "     <line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\" />",
+        "     <line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\" />",
+      "     </g>",
+      "  </svg>",
+      "</button>"
+    ],
+    "description": "Snippet for Dark & Light Theme Switcher"
+  },
+  "burger": {
+    "scope": "html",
+    "prefix": "g-burger",
+    "body": [
+      "<button class=\"btn-reset burger\" type=\"button\" aria-label=\"Open Menu\" aria-controls=\"primary-navigation\" aria-expanded=\"false\"  data-burger>",
+      "  <svg class=\"burger__icon\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">",
+      "     <rect class=\"burger__line burger__line--top\" width=\"80\" height=\"10\" x=\"10\" y=\"25\" rx=\"5\"></rect>",
+      "     <rect class=\"burger__line burger__line--middle\" width=\"80\" height=\"10\" x=\"10\" y=\"45\" rx=\"5\"></rect>",
+      "     <rect class=\"burger__line burger__line--bottom\" width=\"80\" height=\"10\" x=\"10\" y=\"65\" rx=\"5\"></rect>",
+      "  </svg>",
+      "</button>"
+    ],
+    "description": "Snippet for burger btn"
+  },
+  "checkbox": {
+    "scope": "html",
+    "prefix": "g-checkbox",
+    "body": [
+      "<label class=\"checkbox\">",
+      "  <input type=\"checkbox\" name=\"\" class=\"input-reset checkbox__input\">",
+      "  <span class=\"checkbox__label\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for custom checkbox"
+  },
+  "radio": {
+    "scope": "html",
+    "prefix": "g-radio",
+    "body": [
+      "<label class=\"radio\">",
+      "  <input type=\"radio\" name=\"\" class=\"input-reset radio__input\">",
+      "  <span class=\"radio__label\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for custom radio"
+  },
+  "radio tabs": {
+    "scope": "html",
+    "prefix": "g-radio-tabs",
+    "body": [
+      "<label class=\"radio-tab\">",
+      "  <input type=\"radio\" name=\"\" value=\"\" class=\"input-reset radio-tab__input\">",
+      "  <span class=\"radio-tab__label\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for radio tabs"
+  },
+  "switch": {
+    "scope": "html",
+    "prefix": "g-switch",
+    "body": [
+      "<label class=\"switch\">",
+      "  <input type=\"checkbox\" name=\"\" class=\"input-reset switch__input\">",
+      "  <span class=\"switch__caption\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for custom checkbox"
+  },
+  "navigation": {
+    "scope": "html",
+    "prefix": "g-nav",
+    "body": [
+      "<nav class=\"nav\" title=\"$1\">",
+      "  <ul role=\"list\" class=\"nav__list\">",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Snippet for navigation"
+  },
+  "social": {
+    "scope": "html",
+    "prefix": "g-social",
+    "body": [
+      "<ul class=\"list-reset social\" title=\"$1\">",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--facebook\" aria-label=\"Our Facebook Page\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--instagram\" aria-label=\"Our Instagram Profile\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--twitter\" aria-label=\"Our Twitter Account\"></a></li>",
+      "</ul>"
+    ],
+    "description": "Snippet for social links"
+  },
+  "basicform": {
+    "prefix": "g-form",
+    "body": [
+      "<form action=\"#\" class=\"form\">",
+      "  <label class=\"form__label\">",
+      "    <input type=\"text\" name=\"Name\" class=\"input-reset form__input\" placeholder=\"Name\">",
+      "  </label>",
+      "  <button type=\"submit\" class=\"btn-reset form__btn\">Send</button>",
+      "</form>"
+    ],
+    "description": "Snippet for basic form"
+  },
+  "basicswiper": {
+    "prefix": "g-swiper",
+    "body": [
+      "<div class=\"swiper $1\">",
+      "  <div class=\"swiper-wrapper\">",
+      "     <div class=\"swiper-slide\">",
+      "     </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic swiper structure"
+  },
+  "graph modal Btn": {
+    "prefix": "g-graph-btn",
+    "body": [
+      "<button class=\"btn-reset $1\" type=\"button\" data-graph-path=\"$2\">$3</button>"
+    ],
+    "description": "Snippet for graph-modal btn"
+  },
+  "graph modal Structure": {
+    "prefix": "g-graph-modal",
+    "body": [
+      "<div class=\"graph-modal\">",
+      "  <div class=\"graph-modal__container\" role=\"dialog\" aria-modal=\"true\" data-graph-target=\"$1\">",
+      "    <button class=\"btn-reset js-modal-close graph-modal__close\" type=\"button\" aria-label=\"Close\"></button>",
+      "    <div class=\"graph-modal__content\">$2</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for graph-modal basic structure"
+  },
+  "picture": {
+    "prefix": "g-picture",
+    "body": [
+      "<picture class=\"\">",
+      "  <source srcset=\"$1.avif\" type=\"image/avif\">",
+      "  <source srcset=\"$1.webp\" type=\"image/webp\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "</picture>"
+    ],
+    "description": "Snippet for basic logo structure"
+  },
+  "svgimg": {
+    "scope": "html",
+    "prefix": "g-svgimg",
+    "body": [
+      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "tooltip": {
+  "prefix": "g-tooltip",
+    "body": [
+      "<tool-tip class=\"tool-tip\" inert role=\"tooltip\" tip-position=\"$1\">Use logical sides: </tool-tip>"
+    ],
+    "description": "Snippet for tooltip"
+  },
+  "section": {
+    "scope": "html",
+    "prefix": "g-section",
+    "body": [
+      "<section class=\"section\">",
+      "  <div class=\"container\">",
+      "    <h2 class=\"section__title\"></h2>",
+      "  </div>",
+      "</section>"
+    ],
+    "description": "Snippet for Section"
+  },
+  "tabs html sctructure": {
+    "prefix": "g-tabs",
+    "body": [
+      "<div class=\"tabs\" data-tabs=\"$1\">",
+      "  <ul class=\"list-reset tabs__list\" role=\"tablist\">",
+      "    <li class=\"tabs__list-item\"><button id=\"tab-1\" class=\"btn-reset tabs__button\" type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"tabpanel-1\">$2</button></li>",
+      "    <li class=\"tabs__list-item\"><button id=\"tab-2\" class=\"btn-reset tabs__button\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"tabpanel-2\">$3</button></li>",
+      "    <li class=\"tabs__list-item\"><button id=\"tab-3\" class=\"btn-reset tabs__button\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"tabpanel-3\">$4</button></li>",
+      "  </ul>",
+      "  <div class=\"tabs__content\">",
+      "    <div class=\"tabs__panel\" id=\"tabpanel-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\" tabindex=\"0\">$5</div>",
+      "    <div class=\"tabs__panel\" id=\"tabpanel-2\" role=\"tabpanel\" aria-labelledby=\"tab-2\" tabindex=\"0\">$6</div>",
+      "    <div class=\"tabs__panel\" id=\"tabpanel-3\" role=\"tabpanel\" aria-labelledby=\"tab-3\" tabindex=\"0\">$7</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic tabs structure"
+  }
+}
