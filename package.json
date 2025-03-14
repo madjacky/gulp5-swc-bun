@@ -10,6 +10,7 @@
     "cssnano": "^7.0.6",
     "del": "^8.0.0",
     "gulp": "^5.0.0",
+    "gulp-avif": "^1.1.1",
     "gulp-cli": "^3.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-if": "^3.0.0",
@@ -18,14 +19,19 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
+    "gulp-webp": "^5.0.0",
     "postcss": "^8.5.3",
     "postcss-import": "^16.1.0",
-    "sass": "^1.85.1"
+    "sass": "^1.85.1",
+    "sharp": "^0.33.5",
+    "through2": "^4.0.2"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "trustedDependencies": [
-    "@parcel/watcher"
+    "@parcel/watcher",
+    "cwebp-bin",
+    "sharp"
   ]
 }
