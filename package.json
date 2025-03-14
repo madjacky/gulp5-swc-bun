@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "devDependencies": {
+    "@swc/core": "^1.11.9",
     "@types/bun": "latest",
     "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.3",
@@ -14,6 +15,7 @@
     "gulp-cheerio": "^1.0.0",
     "gulp-cli": "^3.0.0",
     "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^5.0.0",
@@ -31,13 +33,17 @@
     "postcss-import": "^16.1.0",
     "sass": "^1.85.1",
     "sharp": "^0.33.5",
-    "through2": "^4.0.2"
+    "swc-loader": "^0.2.6",
+    "through2": "^4.0.2",
+    "webpack": "^5.98.0",
+    "webpack-stream": "^7.0.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "trustedDependencies": [
     "@parcel/watcher",
+    "@swc/core",
     "cwebp-bin",
     "sharp"
   ]

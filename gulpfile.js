@@ -4,7 +4,9 @@ import { paths } from './gulp/config/paths.js';
 import { clean } from './gulp/tasks/clean.js';
 
 import { htmlFilesInclude } from './gulp/tasks/html-include.js';
+import { htmlMinify } from './gulp/tasks/html-minify.js';
 
+import { scripts } from './gulp/tasks/scripts.js';
 import { styles } from './gulp/tasks/styles.js';
 
 import { assets } from './gulp/tasks/assets.js';
@@ -32,6 +34,7 @@ const watchFiles = () => {
   });
   gulp.watch(`${app.paths.htmlLayoutFolder.src}/*.html`, htmlFilesInclude);
   gulp.watch(`${app.paths.base.src}/*.html` , htmlFilesInclude);
+  gulp.watch(app.paths.javascriptFolder.src, scripts);
   gulp.watch(app.paths.stylesFolder.src, styles);
   gulp.watch(`${app.paths.assetsFolder.src}/**`, assets);
   gulp.watch(`${app.paths.imagesFolder.src}/**/**.{jpg,jpeg,png,svg}`, images);
@@ -40,8 +43,8 @@ const watchFiles = () => {
   gulp.watch(app.paths.svgSpritesFolder.src, svgSprites);
 };
 
-const dev = gulp.series(clean, htmlFilesInclude, styles, assets, images, avifImages, webpImages, svgSprites, watchFiles);
-const build = gulp.series(clean, htmlFilesInclude, styles, assets, images, avifImages, webpImages, svgSprites);
+const dev = gulp.series(clean, htmlFilesInclude, scripts, styles, assets, images, avifImages, webpImages, svgSprites, watchFiles);
+const build = gulp.series(clean, htmlFilesInclude, scripts, styles, assets, images, avifImages, webpImages, svgSprites, htmlMinify);
 const cache = gulp.series(cacheFiles, rewriteFiles);
 
 export { dev }

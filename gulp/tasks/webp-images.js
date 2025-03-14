@@ -1,4 +1,5 @@
 import webp from 'gulp-webp';
+
 export const webpImages = () => {
   return app.gulp.src([`${app.paths.imagesFolder.src}/**/**.{jpg,jpeg,png}`],  { encoding: false })
     .pipe(webp({

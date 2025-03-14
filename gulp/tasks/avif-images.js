@@ -1,4 +1,5 @@
 import gulpAvif from 'gulp-avif';
+
 export const avifImages = () => {
   return app.gulp.src([`${app.paths.imagesFolder.src}/**/**.{jpg,jpeg,png}`],  { encoding: false })
     .pipe(gulpAvif({

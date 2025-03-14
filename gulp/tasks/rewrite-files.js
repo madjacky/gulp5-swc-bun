@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import revRewrite from 'gulp-rev-rewrite';
+
 export const rewriteFiles = () => {
   const manifest = readFileSync('dist/rev.json');
   app.gulp.src(`${app.paths.stylesFolder.dist}/*.css`)

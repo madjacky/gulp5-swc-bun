@@ -2,6 +2,7 @@ import svgSprite from 'gulp-svg-sprite';
 import svgmin from 'gulp-svgmin';
 import cheerio from 'gulp-cheerio';
 import replace from 'gulp-replace';
+
 export const svgSprites = () => {
   return app.gulp.src(app.paths.svgSpritesFolder.src, { encoding: false })
     .pipe(svgmin({
