@@ -5,26 +5,43 @@ import sharp from 'sharp';
 import path from 'path';
 
 export const images = () => {
+  sharp.cache(false);
   return app.gulp.src([`${app.paths.imagesFolder.src}/**/**.{jpg,jpeg,png,svg}`], { encoding: false })
     .pipe(newer(app.paths.imagesFolder.dist))
-    .pipe(gulpif(app.isProduction, 
+    .pipe(gulpif(app.isProduction,
       through2.obj(function(file, enc, cb) {
         if (file.isNull() || file.isDirectory()) {
           this.push(file);
           return cb();
         }
-        if (path.extname(file.path).toLowerCase() === '.svg') {
+        const ext = path.extname(file.path).toLowerCase();
+        if (ext === '.svg') {
           this.push(file);
           return cb();
         }
-        const ext = path.extname(file.path).toLowerCase();
+        
         try {
           const sharpInstance = sharp(file.contents);
+          sharpInstance.withMetadata(false); 
           if (ext === '.jpg' || ext === '.jpeg') {
-            sharpInstance.jpeg({ quality: 60, progressive: true });
+            sharpInstance.jpeg({ 
+              quality: 75,
+              progressive: true, 
+              mozjpeg: true,
+              trellisQuantisation: true,
+              overshootDeringing: true,
+              optimizeScans: true
+            });
           } else if (ext === '.png') {
-            sharpInstance.png({ compressionLevel: 9, progressive: true });
+            sharpInstance.png({ 
+              compressionLevel: 9,
+              progressive: true,
+              palette: true,
+              quality: 60,
+              dither: 0.5
+            });
           }
+          
           sharpInstance.toBuffer()
             .then(data => {
               file.contents = data;
