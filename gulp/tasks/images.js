@@ -19,21 +19,21 @@ export const images = () => {
           this.push(file);
           return cb();
         }
-        
+
         try {
           const sharpInstance = sharp(file.contents);
-          sharpInstance.withMetadata(false); 
+          sharpInstance.withMetadata(false);
           if (ext === '.jpg' || ext === '.jpeg') {
-            sharpInstance.jpeg({ 
+            sharpInstance.jpeg({
               quality: 75,
-              progressive: true, 
+              progressive: true,
               mozjpeg: true,
               trellisQuantisation: true,
               overshootDeringing: true,
               optimizeScans: true
             });
           } else if (ext === '.png') {
-            sharpInstance.png({ 
+            sharpInstance.png({
               compressionLevel: 9,
               progressive: true,
               palette: true,
@@ -41,7 +41,7 @@ export const images = () => {
               dither: 0.5
             });
           }
-          
+
           sharpInstance.toBuffer()
             .then(data => {
               file.contents = data;
