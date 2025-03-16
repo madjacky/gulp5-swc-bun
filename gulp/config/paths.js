@@ -1,6 +1,5 @@
 const srcFolder = './src';
 const buildFolder = './dist';
-
 export const paths = {
   base: {
     src: srcFolder,

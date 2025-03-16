@@ -6,7 +6,6 @@ import path from 'path';
 
 export const avifImages = () => {
   sharp.cache(false);
-
   return app.gulp.src([`${app.paths.imagesFolder.src}/**/**.{jpg,jpeg,png}`], { encoding: false })
     .pipe(newer({
       dest: app.paths.imagesFolder.dist,
@@ -17,11 +16,9 @@ export const avifImages = () => {
         cb();
         return;
       }
-      
       const ext = path.extname(file.path).toLowerCase();
       const filename = path.basename(file.path, ext);
       const dirname = path.dirname(file.path);
-      
       try {
         const avifOptions = {
           quality: 50,
@@ -32,7 +29,6 @@ export const avifImages = () => {
           avifOptions.lossless = false;
           avifOptions.quality = 50;
         }
-        
         sharp(file.contents)
           .avif(avifOptions)
           .toBuffer()

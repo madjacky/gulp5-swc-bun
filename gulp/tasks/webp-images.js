@@ -6,7 +6,6 @@ import path from 'path';
 
 export const webpImages = () => {
   sharp.cache(false);
-
   return app.gulp.src([`${app.paths.imagesFolder.src}/**/**.{jpg,jpeg,png}`], { encoding: false })
     .pipe(newer({
       dest: app.paths.imagesFolder.dist,
@@ -17,11 +16,9 @@ export const webpImages = () => {
         cb();
         return;
       }
-      
       const ext = path.extname(file.path).toLowerCase();
       const filename = path.basename(file.path, ext);
       const dirname = path.dirname(file.path);
-      
       try {
         const webpOptions = {
           quality: 50,
@@ -33,7 +30,6 @@ export const webpImages = () => {
           webpOptions.nearLossless = true;
           webpOptions.quality = 50;
         }
-        
         sharp(file.contents)
           .webp(webpOptions)
           .toBuffer()

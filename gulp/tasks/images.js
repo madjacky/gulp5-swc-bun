@@ -19,7 +19,6 @@ export const images = () => {
           this.push(file);
           return cb();
         }
-
         try {
           const sharpInstance = sharp(file.contents);
           sharpInstance.withMetadata(false);
@@ -41,7 +40,6 @@ export const images = () => {
               dither: 0.5
             });
           }
-
           sharpInstance.toBuffer()
             .then(data => {
               file.contents = data;

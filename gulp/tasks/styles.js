@@ -2,7 +2,6 @@ import browserSync from 'browser-sync';
 import gulpif from 'gulp-if';
 import notify from 'gulp-notify';
 import plumber from 'gulp-plumber';
-
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
