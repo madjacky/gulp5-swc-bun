@@ -1,3 +1,19 @@
 {
-  "exclude": ["node_modules", "dist", "vendor", "gulpfile.js", "package.json", ".stylelintrc", "\\.md$", "\\.php$"]
+  "exclude": [
+    "node_modules/",
+    "dist/",
+    ".vscode/",
+    "gulp/",
+    "package.json",
+    "package-lock.json",
+    "tsconfig.json",
+    "bun.lock",
+    ".gitignore",
+    ".stylelintignore",
+    ".stylelintrc.json",
+    ".htmlhintrc",
+    "gulpfile.js",
+    "\\.md$",
+    "\\.php$"
+  ]
 }
