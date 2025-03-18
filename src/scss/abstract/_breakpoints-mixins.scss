@@ -1,0 +1,275 @@
+/* Breakpoints-xxs */
+@mixin xxs-only {
+  @media (0em <= width <= 15em) {
+    @content;
+  }
+}
+@mixin xxs-n-below {
+  @media (width < 15em) {
+    @content;
+  }
+}
+@mixin xxs-n-above {
+  @media (width >= 15em) {
+    @content;
+  }
+}
+@mixin xxs-phone {
+  @media (0em <= width <= 15em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* Breakpoints-xs */
+@mixin xs-only {
+  @media (width >= 15em) {
+    @content;
+  }
+}
+@mixin xs-n-below {
+  @media (width < 22.5em) {
+    @content;
+  }
+}
+@mixin xs-n-above {
+  @media (width >= 22.5em) {
+    @content;
+  }
+}
+@mixin xs-phone {
+  @media (15em <= width <= 22.5em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* Breakpoints-sm */
+@mixin sm-only {
+  @media (22.5em <= width <= 30em) {
+    @content;
+  }
+}
+@mixin sm-n-below {
+  @media (width < 30em) {
+    @content;
+  }
+}
+@mixin sm-n-above {
+  @media (width >= 30em) {
+    @content;
+  }
+}
+@mixin sm-phone {
+  @media (22.5em <= width <= 30em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* Breakpoints-md */
+@mixin md-only {
+  @media (30em <= width <= 48em) {
+    @content;
+  }
+}
+@mixin md-n-below {
+  @media (width < 48em) {
+    @content;
+  }
+}
+@mixin md-n-above {
+  @media (width >= 48em) {
+    @content;
+  }
+}
+@mixin md-phone {
+  @media (30em <= width <= 48em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* Breakpoints-lg */
+@mixin lg-only {
+  @media (48em <= width <= 64em) {
+    @content;
+  }
+}
+@mixin lg-n-below {
+  @media (width < 64em) {
+    @content;
+  }
+}
+@mixin lg-n-above {
+  @media (width >= 64em) {
+    @content;
+  }
+}
+@mixin lg-phone {
+  @media (48em <= width <= 64em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* Breakpoints-xl */
+@mixin xl-only {
+  @media (64em <= width <= 90em) {
+    @content;
+  }
+}
+@mixin xl-n-below {
+  @media (width < 90em) {
+    @content;
+  }
+}
+@mixin xl-n-above {
+  @media (width >= 90em) {
+    @content;
+  }
+}
+/* Breakpoints-xxl */
+@mixin xxl-only {
+  @media (90em <= width <= 120em) {
+    @content;
+  }
+}
+@mixin xxl-n-below {
+  @media (width < 120em) {
+    @content;
+  }
+}
+@mixin xxl-n-above {
+  @media (width >= 120em) {
+    @content;
+  }
+}
+
+/* COntainer Queries Breakpoints-xxs */
+@mixin cq-xxs-only {
+  @container (0em <= inline-size <= 15em) {
+    @content;
+  }
+}
+@mixin cq-xxs-n-below {
+  @container (inline-size < 15em) {
+    @content;
+  }
+}
+@mixin cq-xxs-n-above {
+  @container (inline-size >= 15em) {
+    @content;
+  }
+}
+@mixin cq-xxs-phone {
+  @container (0em <= inline-size <= 15em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* COntainer Queries Breakpoints-xs */
+@mixin cq-xs-only {
+  @container (inline-size >= 15em) {
+    @content;
+  }
+}
+@mixin cq-xs-n-below {
+  @container (inline-size < 22.5em) {
+    @content;
+  }
+}
+@mixin cq-xs-n-above {
+  @container (inline-size >= 22.5em) {
+    @content;
+  }
+}
+@mixin cq-xs-phone {
+  @container (15em <= inline-size <= 22.5em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* COntainer Queries Breakpoints-sm */
+@mixin cq-sm-only {
+  @container (22.5em <= inline-size <= 30em) {
+    @content;
+  }
+}
+@mixin cq-sm-n-below {
+  @container (inline-size < 30em) {
+    @content;
+  }
+}
+@mixin cq-sm-n-above {
+  @container (inline-size >= 30em) {
+    @content;
+  }
+}
+@mixin cq-sm-phone {
+  @container (22.5em <= inline-size <= 30em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* COntainer Queries Breakpoints-md */
+@mixin cq-md-only {
+  @container (30em <= inline-size <= 48em) {
+    @content;
+  }
+}
+@mixin cq-md-n-below {
+  @container (inline-size < 48em) {
+    @content;
+  }
+}
+@mixin cq-md-n-above {
+  @container (inline-size >= 48em) {
+    @content;
+  }
+}
+@mixin cq-md-phone {
+  @container (30em <= inline-size <= 48em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* COntainer Queries Breakpoints-lg */
+@mixin cq-lg-only {
+  @container (48em <= inline-size <= 64em) {
+    @content;
+  }
+}
+@mixin cq-lg-n-below {
+  @container (inline-size < 64em) {
+    @content;
+  }
+}
+@mixin cq-lg-n-above {
+  @container (inline-size >= 64em) {
+    @content;
+  }
+}
+@mixin cq-lg-phone {
+  @container (48em <= inline-size <= 64em) and (orientation: portrait) {
+    @content;
+  }
+}
+/* COntainer Queries Breakpoints-xl */
+@mixin cq-xl-only {
+  @container (64em <= inline-size <= 90em) {
+    @content;
+  }
+}
+@mixin cq-xl-n-below {
+  @container (inline-size < 90em) {
+    @content;
+  }
+}
+@mixin cq-xl-n-above {
+  @container (inline-size >= 90em) {
+    @content;
+  }
+}
+/* COntainer Queries Breakpoints-xxl */
+@mixin cq-xxl-only {
+  @container (90em <= inline-size <= 120em) {
+    @content;
+  }
+}
+@mixin cq-xxl-n-below {
+  @container (inline-size < 120em) {
+    @content;
+  }
+}
+@mixin cq-xxl-n-above {
+  @container (inline-size >= 120em) {
+    @content;
+  }
+}

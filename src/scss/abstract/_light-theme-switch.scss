@@ -1,0 +1,23 @@
+@layer theme-props {
+  :where([data-theme='light'], .light, .light-theme) {
+    color-scheme: light;
+    --surface-color-0: var(--white);
+    --surface-color-1: var(--gray-0);
+		--surface-color-2: var(--gray-2);
+		--surface-color-3: var(--gray-3);
+		--surface-color-4: var(--gray-4);
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: var(--gray-12);
+		--text-color-2: var(--gray-7);
+    --link-color: var(--indigo-7);
+		--link-visited-color: var(--purple-7);
+    --scroll-thumb-color: var(--text-color-2);
+    --border-color: var(--surface-color-3);
+    @media (dynamic-range: high) {
+      @supports (color: color(display-p3 0 0 0)) {
+        --link-color: color(display-p3 .1 .4 1);
+        --link-visited-color: color(display-p3 .6 .2 1);
+      }
+    }
+  }
+}

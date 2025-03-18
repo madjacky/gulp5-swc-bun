@@ -1,0 +1,19 @@
+@use '../abstract/' as *;
+@layer base {
+  .page {
+    background-color: oklch(var(--document-surface-color));
+		color: oklch(var(--text-color-1));
+		accent-color: oklch(var(--link-color));
+		caret-color: oklch(var(--link-color));
+		scrollbar-color: oklch(var(--scroll-thumb-color));
+		font-family: var(--font-sans);
+		line-height: var(--font-line-height-4);
+    &__body {
+      @include grid-h-center;
+      container-type: inline-size;
+      min-inline-size: var(--size-24);
+			font-weight: var(--font-weight-400);
+			font-size: var(--font-size-3);
+    }
+  }
+}

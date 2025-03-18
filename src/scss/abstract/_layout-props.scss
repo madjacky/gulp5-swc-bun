@@ -1,0 +1,20 @@
+@use 'size-props';
+@layer layout-props {
+  :where(:root) {
+    --wrapper-content-inline-size: var(--content-size-9: 129.16ch);
+    --wrapper-inline-offset: var(--size-10);
+    --wrapper-inline-size: min(var(--wrapper-content-inline-size), 100% - var(--wrapper-inline-offset));
+    --hero-padding-block: clamp(15rem, 15svb, 20rem);
+    --section-padding-block: clamp(5rem, 10svb, 6rem);
+    --site-header-padding-block: 2rem;
+
+    --layout-inline-offset: var(--size-5);
+    --layout-narrow-size-reduction: 3.75rem;
+    --layout-popout-extra-distance: 3.75rem;
+    --layout-breakout-extra-distance: var(--size-21);
+    --layout-content-max-inline-size: var(--content-size-3);
+    --layout-narrow-column-size: calc((var(--content-max-inline-size) - var(--narrow-size-reduction)) / 2);
+    --layout-content-column-size: var(--narrow-size-reduction);
+    --layout-breakout-column-size: calc(var(--breakout-extra-distance) - var(--popout-extra-distance));
+  }
+}

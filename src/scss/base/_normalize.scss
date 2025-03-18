@@ -1,0 +1,176 @@
+@use '../abstract/' as *;
+@layer normalize {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  ::placeholder {
+    color: oklch(var(--gray-7));
+    opacity: 0.75;
+  }
+  :focus-visible {
+    outline-color: oklch(var(--link-color));
+  }
+  :where(:not(:active):focus-visible) {
+    outline-offset: 5px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :where(:focus-visible) {
+      transition: outline-offset 145ms var(--ease-2);
+    }
+    :where(:not(:active):focus-visible) {
+      transition-duration: .25s;
+    }
+  }
+  :where(:root) {
+    interpolate-size: allow-keywords;
+    --transition-focus: outline-offset 145ms var(--ease-2);
+    @supports (transition-timing-function: linear(0, 1)) {
+      --transition-focus: outline-offset 145ms var(--ease-spring-3);
+    }
+  }
+  :where(:not(dialog, popover)) {
+    margin: 0;
+		padding: 0;
+  }
+  :where(:not(fieldset, progress, meter)) {
+    border-width: 0;
+		border-style: solid;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+  }
+  :where(html) {
+    --isLTR: 1;
+		--isRTL: -1;
+    & {
+      block-size: 100%;
+      hanging-punctuation: first last;
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within {
+				scroll-behavior: auto;
+			}
+      *,
+			*::before,
+			*::after {
+        animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+				scroll-behavior: auto !important;
+      }
+    }
+  }
+  :where(body) {
+    min-block-size: 100vh;
+    min-block-size: 100vb;
+    min-block-size: 100dvh;
+    min-block-size: 100dvb;
+    min-block-size: 100svh;
+    min-block-size: 100svb;
+    font-synthesis: style;
+    text-rendering: optimizeSpeed;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+  }
+  :where(header, main, section, article, footer) {
+    container-type: inline-size;
+  }
+  :where([hidden]) {
+    display: none;
+  }
+  :where(ul, ol, menu)[role='list'] {
+    list-style: none;
+		margin: 0;
+		padding: 0;
+  }
+  :where(input, button, textarea, select) {
+    font: inherit;
+		font-size: inherit;
+		letter-spacing: inherit;
+		word-spacing: inherit;
+  }
+  :where(figure) {
+    display: grid;
+		gap: var(--size-1);
+		place-items: center;
+    & >:where(figcaption) {
+      text-wrap: balance;
+    }
+  }
+  :where(table) {
+    border-collapse: collapse;
+  }
+  :where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block;
+  }
+  :where(img, svg, video) {
+    block-size: auto;
+		max-inline-size: 100%;
+		object-fit: cover;
+  }
+  :where(svg:not([fill="none"])) {
+    fill: currentColor;
+  }
+  :where(svg[stroke]) {
+    stroke: currentColor;
+  }
+  :where(h1, h2, h3, h4, h5, h6) {
+    font-weight: var(--font-weight-700);
+		text-wrap: balance;
+  }
+  :where(h1, h2, h3) {
+    line-height: var(--font-line-height-2);
+  }
+  :where(p, li) {
+    text-wrap: pretty;
+  }
+  :where(p) {
+    max-inline-size: var(--content-size-3);
+  }
+  :where(a) {
+    color: inherit;
+    &:where([href]) {
+      text-decoration-color: oklch(var(--link-color));
+    }
+    &:where(:visited) {
+      text-decoration-color: oklch(var(--link-visited-color));
+    }
+    &:where(:not(:hover)) {
+      text-decoration: inherit;
+    }
+    &:where(:not([class])) {
+      text-decoration-skip-ink: auto;
+    }
+  }
+  :where(
+    a[href],
+    area,
+    button,
+    input:not([type="text"],[type="email"],[type="number"],[type="password"],[type=""],[type="tel"],[type="url"]),
+    label[for], select, summary,
+    [tabindex]:not([tabindex*="-"])
+  ) {
+    cursor: pointer;
+  }
+  :where(
+    a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*="-"])
+  ) {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}

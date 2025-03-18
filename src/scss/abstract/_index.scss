@@ -1,3 +1,7 @@
+@forward 'breakpoints-mixins';
+@forward 'display-mixins';
+@forward 'global-mixins';
+@forward 'functions';
 @forward 'browserQueries-props';
 @forward 'mediaQueries-props';
 @forward 'typography-props';
@@ -8,4 +12,8 @@
 @forward 'motion-props';
 @forward 'color-props';
 @forward 'shadow-props';
-@forward 'theme-props';
+@forward 'layout-props';
+@forward 'light-theme';
+@forward 'dark-theme';
+@forward 'light-theme-switch';
+@forward 'dark-theme-switch';

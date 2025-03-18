@@ -1,0 +1,4 @@
+@use '../abstract/' as *;
+@layer typography-props.fonts {
+  @include font-face("Flow Circular", "../../assets/fonts/FlowCircular-Regular", 400, normal);
+}
