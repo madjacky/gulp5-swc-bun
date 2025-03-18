@@ -1,56 +1,70 @@
 :where(:root) {
   interpolate-size: allow-keywords;
 }
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
-:where(:not(dialog, popover)) {
+
+:where(:not(dialog)) {
   margin: 0;
   padding: 0;
 }
+
 :where(:not(fieldset, progress, meter)) {
-  border-width: 0;
   border-style: solid;
-  background-origin: border-box;
+  border-width: 0;
   background-repeat: no-repeat;
+  background-origin: border-box;
 }
+
 :where(html) {
   block-size: 100%;
 }
+
 :where(body) {
+  container-type: inline-size;
   min-block-size: 100svb;
   min-inline-size: 20em;
-  container-type: inline-size;
 }
+
 :where(header, main, section, article, footer) {
   container-type: inline-size;
 }
+
 :where(h1, h2, h3, h4, h5, h6) {
   font-weight: 700;
   text-wrap: balance;
 }
+
 :where(h1, h2, h3) {
   line-height: 1.1;
 }
+
 :where(p, li) {
   text-wrap: pretty;
 }
+
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
   display: block;
 }
+
 :where(img, svg, video) {
+  object-fit: cover;
   block-size: auto;
   max-inline-size: 100%;
-  object-fit: cover;
 }
+
 .page {
-  color: hotpink;
+  color: #ff69b4;
+
   &__body {
     display: grid;
     place-content: center;
-    & > main {
+
+    > main {
       container-type: initial;
     }
   }

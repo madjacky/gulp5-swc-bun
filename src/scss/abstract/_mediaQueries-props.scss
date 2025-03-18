@@ -1,0 +1,19 @@
+@layer mediaQueries-props {
+  @media (prefers-reduced-motion: no-preference) {} // motion ok
+  @media (prefers-reduced-motion: reduce) {} // motion not ok
+  @media (prefers-reduced-transparency: no-preference) {} // opacity ok
+  @media (prefers-reduced-transparency: reduce) {} // opacity not ok
+  @media (prefers-reduced-data: no-preference) {} // use data ok
+  @media (prefers-reduced-data: reduce) {} // use data not ok
+  @media (prefers-color-scheme: dark) {}
+  @media (prefers-color-scheme: light) {}
+  @media (prefers-contrast: more) {}
+  @media (prefers-contrast: less) {}
+  @media (orientation: portrait) {}
+  @media (orientation: landscape) {}
+  @media (dynamic-range: high) {}
+  @media (hover: none) and (pointer: coarse) {}
+  @media (hover: none) and (pointer: fine) {}
+  @media (hover) and (pointer: coarse) {}
+  @media (hover) and (pointer: fine) {}
+}

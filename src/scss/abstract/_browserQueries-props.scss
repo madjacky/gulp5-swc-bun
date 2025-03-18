@@ -1,0 +1,8 @@
+@layer browserQueries-props {
+  @media (-apple-pay-button-style: inherit) {}
+  @media (-moz-appearance: inherit) {}
+  @media (-moz-osx-font-smoothing: inherit) {}
+  @media (-webkit-app-region: inherit) and (not (container-type: none)) {}
+  @media (-webkit-app-region: inherit) and (container-type: none) {}
+  @media (alt: inherit) and (not (-apple-pay-button-style: inherit)) {}
+}

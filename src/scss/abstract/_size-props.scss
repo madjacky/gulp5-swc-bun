@@ -1,0 +1,81 @@
+@layer size-props {
+  :where(:root) {
+    --size-negative-0: -0.5rem;
+    --size-negative-1: -0.25rem;
+    --size-0: .25rem;
+    --size-1: .5rem;
+    --size-2: .625rem;
+    --size-3: .75rem;
+    --size-4: .875rem;
+    --size-5: 1rem;
+    --size-6: 1.125rem;
+    --size-7: 1.25rem;
+    --size-8: 1.5rem;
+    --size-9: 1.75rem;
+    --size-10: 2rem;
+    --size-11: 2.5rem;
+    --size-12: 3rem;
+    --size-13: 3.5rem;
+    --size-14: 4rem;
+    --size-15: 4.5rem;
+    --size-16: 5rem;
+    --size-17: 5.5rem;
+    --size-18: 6rem;
+    --size-19: 6.5rem;
+    --size-20: 7rem;
+    --size-21: 7.5rem;
+    --size-22: 10rem;
+    --size-23: 15rem;
+    --size-24: 20rem;
+    --size-25: 25rem;
+    --size-26: 30rem;
+    --content-size-1: 20ch;
+    --content-size-2: 45ch;
+    --content-size-3: 60ch;
+    --content-size-4: 80ch;
+    --content-size-5: 90ch;
+    --content-size-6: 100ch;
+    --content-size-7: 111.31ch; // 960px
+    --content-size-8: 118.73ch; // 1024px
+    --content-size-9: 129.16ch; // 1140px
+    --content-size-10: 142.61ch; // 1230px
+    --content-size-11: 155.37ch; // 1440px
+    --fluid-size-1: clamp(0.5rem, 1vi, 1rem);
+    --fluid-size-2: clamp(1rem, 2vi, 1.5rem);
+    --fluid-size-3: clamp(1.5rem, 3vi, 2rem);
+    --fluid-size-4: clamp(2rem, 4vi, 3rem);
+    --fluid-size-5: clamp(4rem, 5vi, 5rem);
+    --fluid-size-6: clamp(5rem, 7vi, 7.5rem);
+    --fluid-size-7: clamp(7.5rem, 10vi, 10rem);
+    --fluid-size-8: clamp(10rem, 20vi, 15rem);
+    --fluid-size-9: clamp(15rem, 30vi, 20rem);
+    --fluid-size-10: clamp(20rem, 40vi, 30rem);
+    --relative-negative-size-1: -0.5ch;
+    --relative-negative-size-2: -0.25ch;
+    --relative-size-1: .25ch;
+    --relative-size-2: .5ch;
+    --relative-size-3: 1ch;
+    --relative-size-4: 1.25ch;
+    --relative-size-5: 1.5ch;
+    --relative-size-6: 1.75ch;
+    --relative-size-7: 2ch;
+    --relative-size-8: 3ch;
+    --relative-size-9: 4ch;
+    --relative-size-10: 5ch;
+    --relative-size-11: 7.5ch;
+    --relative-size-12: 10ch;
+    --relative-size-13: 15ch;
+    --relative-size-14: 20ch;
+    --relative-size-15: 30ch;
+    --header-size-1: 20ch;
+    --header-size-2: 25ch;
+    --header-size-3: 35ch;
+    --size-xxs: 15em;
+    --size-xs: 22.5em;
+    --size-sm: 30em;
+    --size-md: 48em;
+    --size-lg: 64em;
+    --size-xl: 90em;
+    --size-xxl: 120em;
+  }
+}

@@ -1,0 +1,10 @@
+@layer ratio-props {
+  :where(:root) {
+    --aspect-ratio-square: 1;
+    --aspect-ratio-landscape: 4/3;
+    --aspect-ratio-portrait: 3/4;
+    --aspect-ratio-wide-screen: 16/9;
+    --aspect-ratio-ultra-wide: 18/5;
+    --aspect-ratio-golden: 1.618/1;
+  }
+}

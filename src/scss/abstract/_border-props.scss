@@ -1,0 +1,39 @@
+@layer border-props {
+  :where(:root) {
+    --border-size-1: 1px;
+    --border-size-2: 2px;
+    --border-size-3: 5px;
+    --border-size-4: 10px;
+    --border-size-5: 25px;
+    --border-radius-1: 2px;
+    --border-radius-2: 4px;
+    --border-radius-3: 5px;
+    --border-radius-4: 6px;
+    --border-radius-5: .5rem;
+    --border-radius-6: .625rem;
+    --border-radius-7: .75rem;
+    --border-radius-8: 1rem;
+    --border-radius-9: 2rem;
+    --border-radius-10: 4rem;
+    --border-radius-11: 8rem;
+    --border-radius-circle-ver1: 1e5px;
+    --border-radius-circle-ver2: 3.519e12px;
+    --border-radius-circle-ver3: 50%;
+    --border-conditional-radius-1: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-1));
+    --border-conditional-radius-2: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-2));
+    --border-conditional-radius-3: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-3));
+    --border-conditional-radius-4: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-4));
+    --border-conditional-radius-5: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-5));
+    --border-conditional-radius-6: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-6));
+    --border-conditional-radius-7: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-7));
+    --border-conditional-radius-8: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-8));
+    --border-conditional-radius-9: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-9));
+    --border-conditional-radius-10: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-10));
+    --border-conditional-radius-11: clamp(0px, calc(100vi - 100%) * 1e5, var(--border-radius-11));
+    --border-blob-radius-1: 30% 70% 70% 30% / 53% 30% 70% 47%;
+    --border-blob-radius-2: 53% 47% 34% 66% / 63% 46% 54% 37%;
+    --border-blob-radius-3: 37% 63% 56% 44% / 49% 56% 44% 51%;
+    --border-blob-radius-4: 63% 37% 37% 63% / 43% 37% 63% 57%;
+    --border-blob-radius-5: 49% 51% 48% 52% / 57% 44% 56% 43%;
+  }
+}
