@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .in-grid {
+    @include in-grid;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .disable-scroll {
+    overflow: hidden;
+		position: fixed;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		block-size: 100dvb;
+		block-size: 100svb;
+		inline-size: 100%;
+		overscroll-behavior: none;
+  }
+  .page--ios .dis-scroll {
+    position: relative;
+  }
+}

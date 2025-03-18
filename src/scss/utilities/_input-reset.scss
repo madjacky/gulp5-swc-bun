@@ -1,0 +1,27 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .input-reset {
+    -webkit-appearance: none;
+		appearance: none;
+		border: none;
+		border-radius: 0;
+    &::-webkit-search-decoration,
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration {
+			display: none;
+		}
+    &::-ms-reveal,
+		&::-ms-clear {
+			display: none;
+		}
+    &::-webkit-file-upload-button {
+			visibility: hidden;
+		}
+    &::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+  }
+}

@@ -1,0 +1,9 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .flow {
+    --_flow-space: var(--size-10);
+    & > *:where(:not(:first-child)) {
+      margin-block-start: var(--_flow-space);
+    }
+  }
+}

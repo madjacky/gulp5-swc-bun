@@ -1,0 +1,6 @@
+@use '../abstract/' as *;
+@layer utilities {
+  .in-flex {
+    @include in-flex;
+  }
+}
