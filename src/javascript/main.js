@@ -1,3 +1,4 @@
+import './_components.js';
 import { Logger } from "./_components.js";
 
 class Application {

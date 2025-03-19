@@ -1,4 +1,42 @@
 @use '../abstract/' as *;
 @layer component {
-  .burger-button {}
+  .burger {
+    --_burger-color: var(--text-color-1);
+    --_burger-hover-color: var(--text-color-2);
+    --_burger-size: var(--size-10);
+    block-size: var(--_burger-size);
+    inline-size: var(--_burger-size);
+    aspect-ratio: var(--aspect-ratio-square);
+    border-radius: var(--border-radius-2);
+    border: var(--border-size-2) solid oklch(var(--_burger-color));
+    @media (prefers-reduced-motion: no-preference) {
+      transition: border-color 300ms var(--ease-1), color 300ms var(--ease-1), fill 300ms var(--ease-1), stroke 300ms var(--ease-1);
+    }
+    &:is(:focus-visible, :hover, :active) {
+      border-color: oklch(var(--_burger-hover-color));
+      color: oklch(var(--_burger-hover-color));
+    }
+    &__line {
+      transform-origin: center;
+      transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    }
+    &:is([aria-expanded="true"]) {
+      .burger__line {
+        transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+      }
+      .burger__line--top,
+      .burger__line--bottom {
+        y: 45;
+      }
+      .burger__line--top {
+        rotate: 45deg;
+      }
+      .burger__line--middle {
+        opacity: 0;
+      }
+      .burger__line--bottom {
+        rotate: -45deg;
+      }
+    }
+  }
 }
