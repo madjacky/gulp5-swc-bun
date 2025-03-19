@@ -1,2 +1,7 @@
 @use '../abstract/' as *;
-@layer utilities {}
+@layer utilities {
+  .wrapper {
+    margin-inline: auto;
+		inline-size: var(--wrapper-inline-size);
+  }
+}
