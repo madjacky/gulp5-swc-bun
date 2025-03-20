@@ -1,40 +1,8 @@
 {
   "name": "gulp5-swc-bun",
-  "author": "Jack Iakovenko - The Internet's Own Sectarian Kiddo",
   "version": "1.0.0",
-  "description": "Automated build system using Gulp 5, Bun as a package manager, and SWC Loader for fast JavaScript transpilation",
-  "keywords": [
-    "gulp",
-    "gulp5",
-    "task-runner",
-    "automation",
-    "bun",
-    "swc",
-    "swc-loader",
-    "javascript",
-    "transpiler",
-    "css",
-    "scss",
-    "sass",
-    "postcss",
-    "css-processing",
-    "css-minification",
-    "autoprefixer",
-    "css-optimization"
-  ],
-  "license": "ISC",
+  "author": "Jack Iakovenko - The Internet's Own Sectarian Kiddo",
   "module": "gulpfile.js",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "gulp",
-    "build": "bun run stylelint && bun run code && gulp build --build",
-    "cache": "gulp cache",
-    "zip": "gulp zip --build",
-    "code": "editorconfig-checker",
-    "stylelint": "bunx stylelint **/*.scss",
-    "style-fix": "bunx stylelint **/*.scss --fix"
-  },
   "devDependencies": {
     "@swc/core": "^1.11.9",
     "@types/bun": "latest",
@@ -76,10 +44,42 @@
   "peerDependencies": {
     "typescript": "^5"
   },
+  "description": "Automated build system using Gulp 5, Bun as a package manager, and SWC Loader for fast JavaScript transpilation",
+  "keywords": [
+    "gulp",
+    "gulp5",
+    "task-runner",
+    "automation",
+    "bun",
+    "swc",
+    "swc-loader",
+    "javascript",
+    "transpiler",
+    "css",
+    "scss",
+    "sass",
+    "postcss",
+    "css-processing",
+    "css-minification",
+    "autoprefixer",
+    "css-optimization"
+  ],
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "dev": "gulp",
+    "build": "bun run stylelint && bun run code && gulp build --build",
+    "cache": "gulp cache",
+    "zip": "gulp zip --build",
+    "code": "editorconfig-checker",
+    "stylelint": "bunx stylelint **/*.scss",
+    "style-fix": "bunx stylelint **/*.scss --fix"
+  },
   "trustedDependencies": [
     "@parcel/watcher",
     "@swc/core",
     "cwebp-bin",
     "sharp"
-  ]
+  ],
+  "type": "module"
 }

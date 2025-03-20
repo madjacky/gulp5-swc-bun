@@ -8,13 +8,13 @@
     --section-padding-block: clamp(5rem, 10svb, 6rem);
     --site-header-padding-block: 2rem;
 
-    --layout-inline-offset: var(--size-5);
+    --layout-inline--offset: var(--size-5);
+		--layout-breakout-extra-distance: var(--size-21);
     --layout-narrow-size-reduction: 3.75rem;
-    --layout-popout-extra-distance: 3.75rem;
-    --layout-breakout-extra-distance: var(--size-21);
+		--layout-popout-extra-distance: 3.75rem;
     --layout-content-max-inline-size: var(--content-size-3);
-    --layout-narrow-column-size: calc((var(--content-max-inline-size) - var(--narrow-size-reduction)) / 2);
-    --layout-content-column-size: var(--narrow-size-reduction);
-    --layout-breakout-column-size: calc(var(--breakout-extra-distance) - var(--popout-extra-distance));
+    --layout-breakout-column-size: calc(var(--layout-breakout-extra-distance) - var(--layout-popout-extra-distance));
+    --layout-narrow-column-size: calc((var(--layout-content-max-inline-size) - var(--layout-narrow-size-reduction)) / 2);
+    --layout-content-column-size: var(--layout-narrow-size-reduction);
   }
 }

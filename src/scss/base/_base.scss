@@ -9,13 +9,11 @@
 		font-family: var(--font-family-sans);
 		line-height: var(--font-line-height-4);
     &__body {
+      container-type: inline-size;
+      min-inline-size: var(--size-24);
+			font-weight: var(--font-weight-400);
+			font-size: var(--font-size-3);
       @include grid-footer-sticky;
-      & {
-        container-type: inline-size;
-        min-inline-size: var(--size-24);
-			  font-weight: var(--font-weight-400);
-			  font-size: var(--font-size-3);
-      }
     }
   }
 }
