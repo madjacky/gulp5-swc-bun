@@ -5,19 +5,19 @@
     --_button-accent-color: var(--link-color);
     --_button-text-color: initial;
 
-    --_button-surface-color: var(--surface-color-0);
+    --_button-surface-color: transparent;
 
-    --_button-border-color: var(--surface-color-3);
+    --_button-border-color: transparent;
 
     --_button-highlight-size: 0;
     --_button-highlight-color: var(--gray-5);
 
-    --_button-ink-shadow-color: var(--gray-3);
+    --_button-ink-shadow-color: initial;
     --_button-ink-shadow: 0 1px 0 oklch(var(--_button-ink-shadow-color));
 
-    --_button-icon-size: var(--relative-size-7);
+    --_button-icon-size: var(--size-8);
     --_button-icon-color: var(--_button-accent-color);
-    --_button-font-size: initial;
+    --_button-font-size: var(--fluid-font-size-2);
 
     display: inline-flex;
     align-items: center;
@@ -30,32 +30,79 @@
     border-radius: var(--border-radius-2);
     box-shadow: var(--shadow-2), 0 1px oklch(var(--surface-color-3)), 0 0 0 var(--_button-highlight-size) oklch(var(--_button-highlight-color) / 25%);
     background-color: oklch(var(--_button-surface-color));
-    text-shadow: var(--_button-ink-shadow);
     color: oklch(var(--_button-text-color));
     font-weight: var(--font-weight-700);
     font-size: var(--_button-font-size);
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+
+    /* Element states */
     @media (prefers-reduced-motion: no-preference) {
-      transition: background-color .5s var(--ease-3), border-color .5s var(--ease-3), color .5s var(--ease-3), box-shadow 145ms var(--ease-4), text-shadow 145ms var(--ease-4), outline-offset 145ms var(--ease-4);
+      transition: border-color .5s var(--ease-3), background-color .5s var(--ease-3), color .5s var(--ease-3), box-shadow 145ms var(--ease-4), text-shadow 145ms var(--ease-4), outline-offset 145ms var(--ease-4);
     }
+
+    /* Theme */
     @media (prefers-color-scheme: dark) {
       --_button-highlight-color: var(--gray-12);
-      --_button-ink-shadow-color: var(--surface-color-1);
     }
 
-    &:where(:not(:active):hover) {
-      --_button-highlight-size: var(--size-1);
-      transition-duration: .25s;
-    }
-
-    &:where(:not([data-button-variant])) {
-      @media (prefers-color-scheme: dark) {
-        --_button-surface-color: var(--surface-color-3);
+    &:where(:not([disabled])) {
+      &:where(:not(:active):hover) {
+        transition-duration: .25s;
       }
     }
 
+    /* Disabled */
+    &:where(:not([disabled])) {}
+    &:is([disabled]) {
+      --_button-surface-color: none;
+      --_button-text-color: var(--gray-6);
+      cursor: not-allowed;
+      box-shadow: var(--shadow-1);
+      @media (prefers-color-scheme: dark) {
+        --_button-text-color: var(--gray-5);
+      }
+    }
+
+    /* Icon */
+    &:where(:has(svg), &[data-button-variant="icon-only"]) {
+      gap: 1ex;
+      & > svg {
+        flex-shrink: 0;
+        filter: drop-shadow(var(--_button-ink-shadow));
+      }
+      & > svg:not([fill="none"]) {
+        fill: currentColor;
+      }
+      & > svg[stroke] {
+        stroke: currentColor;
+      }
+    }
+
+    &:where([data-button-variant="icon-only"]) {
+      --_button-ink-shadow-color: var(--gray-3);
+      padding: 1.5ex;
+      aspect-ratio: var(--aspect-ratio-square);
+      border-radius: var(--border-radius-circle-ver1);
+      border-width: var(--border-size-2);
+      box-shadow: 0 0 0 var(--_button-highlight-size) oklch(var(--_button-highlight-color) / 25%);
+      @media (prefers-color-scheme: dark) {
+        --_button-ink-shadow-color: var(--surface-color-1);
+      }
+      & > svg {
+        aspect-ratio: var(--aspect-ratio-square);
+        block-size: var(--_button-icon-size);
+        inline-size: var(--_button-icon-size);
+      }
+      &:where(:not([disabled])) {
+        &:where(:not(:active):hover) {
+          --_button-highlight-size: var(--size-1);
+        }
+      }
+    }
+
+    /* Sizes */
     &:where([data-button-size="small"]) {
       --_button-size: 1.875rem;
       padding-block: 0;
@@ -66,25 +113,80 @@
       padding-inline: 4ex;
     }
 
+    /* Variants */
+    &:where(:not([data-button-variant="elevated"], [data-button-variant="outlined"], [data-button-variant="tonal"])) {
+      --_button-surface-color: var(--surface-color-0);
+      --_button-border-color: var(--surface-color-3);
+      @media (prefers-color-scheme: dark) {
+        --_button-surface-color: var(--surface-color-3);
+      }
+      &:where(:not([disabled])) {
+        &:where(:not(:active):hover) {
+          --_button-highlight-size: var(--size-0);
+        }
+      }
+    }
+    &:where([data-button-variant="tonal"]) {
+      --_button-surface-color: var(--indigo-8);
+      --_button-border-color: var(--indigo-8);
+      --_button-text-color: var(--white);
+      --_button-ink-shadow-color: var(--indigo-9);
+      text-shadow: var(--_button-ink-shadow);
+      &:where(:not([disabled])) {
+        &:where(:not(:active):hover) {
+          --_button-surface-color: var(--indigo-7);
+          --_button-border-color: var(--indigo-7);
+        }
+      }
+    }
+
     &:where([data-button-variant="elevated"]) {
-      --_button-surface-color: var(--blue-8);
-      --_button-text-color: var(--neutral-0);
-      &:where(:not(:active):hover) {
-        --_button-highlight-size: var(--size-0);
-        --_button-border-color: var(--blue-9);
-        --_button-surface-color: var(--blue-9);
+      --_button-surface-color: 0.9439 0.011035 255.15;
+      --_button-border-color: 0.9439 0.011035 255.15;
+      --_button-text-color: 0.58 0.1869 220;
+      box-shadow:
+        0px 3px 1px -2px oklch(0 0 0 / 20%),
+        0px 2px 2px 0px oklch(0 0 0 / 14%),
+        0px 1px 5px 0px oklch(0 0 0 / 12%);
+      @media (prefers-color-scheme: dark) {
+        --_button-surface-color: var(--neutral-15);
+        --_button-border-color: var(--neutral-15);
+      }
+      &:where(:not([disabled])) {
+        &:where(:not(:active):hover) {
+          --_button-surface-color: 0.9427 0.022383 252.55;
+          --_button-border-color: 0.9427 0.022383 252.55;
+          @media (prefers-color-scheme: dark) {
+            --_button-surface-color: var(--neutral-12);
+            --_button-border-color: var(--neutral-12);
+          }
+        }
       }
     }
     &:where([data-button-variant="outlined"]) {
-      --_button-surface-color: transparent;
-      --_button-border-color: var(--blue-8);
-      --_button-text-color: var(--blue-8);
-      border-width: var(--border-size-1);
-      &:where(:not(:active):hover) {
-        --_button-highlight-size: var(--size-0);
-        --_button-border-color: var(--blue-8);
-        --_button-surface-color: var(--blue-8);
-        --_button-text-color: var(--neutral-0);
+      --_button-border-color: var(--blue-5);
+      --_button-text-color: var(--blue-9);
+      --_button-ink-shadow-color: var(--blue-9);
+      @media (prefers-color-scheme: dark) {
+        --_button-border-color: var(--blue-3);
+        --_button-text-color: var(--blue-1);
+      }
+
+      &:where(:not([disabled])) {
+        &:where(:not(:active):hover) {
+          --_button-surface-color: var(--blue-8);
+          --_button-border-color: var(--blue-8);
+          --_button-text-color: var(--blue-0);
+
+          @media (prefers-color-scheme: dark) {
+            --_button-surface-color: var(--blue-3);
+            --_button-border-color: var(--blue-3);
+            --_button-text-color: var(--black);
+          }
+          @media (prefers-color-scheme: light) {
+            text-shadow: var(--_button-ink-shadow);
+          }
+        }
       }
     }
   }
